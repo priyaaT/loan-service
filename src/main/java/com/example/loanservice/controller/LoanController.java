@@ -28,7 +28,7 @@ public class LoanController {
     }
 
     @GetMapping("/viewLoans/{userId}")
-    public ResponseEntity<List<LoanDetails>> loginCustomer(@PathVariable int userId) {
+    public ResponseEntity<List<LoanDetails>> showLoans(@PathVariable int userId) {
         List<LoanDetails> loanDetails = loanService.findByUserId(userId);
         if (loanDetails != null) {
             return new ResponseEntity<>(loanDetails, HttpStatus.ACCEPTED);

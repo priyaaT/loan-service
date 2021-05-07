@@ -30,7 +30,7 @@ public class LoanDetails {
     @Column
     LoanType loanType;
     @Column
-    @NotNull(message = "UserId cannot be null")
+    @NotNull(message = "LoanAmount cannot be null")
     float loanAmount;
     @Column
     @CreationTimestamp
